@@ -1,0 +1,23 @@
+div {
+  border: 2px dotted red;
+}
+
+.gallows {
+  height: 450px;
+}
+
+.gallows img {
+  height: 450px;
+}
+
+.wordBlank {
+  height: 450px;
+}
+
+.grave {
+  height: 250px;
+}
+
+.keyboard {
+  height: 250px;
+}
