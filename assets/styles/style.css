@@ -3,13 +3,13 @@
 }
 
 /* Styles for the alphabet keypad */
-#alphabet-keypad, {
+#keypad, {
   display: inline-block;
   vertical-align: middle;
   float: none;
 }
 
-#alphabet-keypad {
+#keypad {
   text-align: center;
   padding: 0 140px;
 }
@@ -60,4 +60,71 @@
 
 .keypad {
   margin: 0 15em;
+}
+
+#content {
+  text-align: center;
+  background-image: url(assets/images/paper-texture.png);
+  border-bottom: 2px solid black;
+  height: 80%;
+}
+
+.title {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 0px;
+}
+#secret {
+  font-family: 'arial black';
+  font-size: 4em;
+  font-weight: bold;
+  letter-spacing: 10px;
+  color: #5ba1ff;
+}
+.letters {
+  margin-top: 20px;
+}
+.letters span {
+  font-family: 'Lato', monospace;
+  font-size: 2em;
+  font-weight: bold;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  background-color: #5ba1ff;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  border-radius: 4px;
+  border: 1px solid #04B404;
+  -webkit-box-shadow: 3px 3px 5px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    3px 3px 5px rgba(50, 50, 50, 0.75);
+  box-shadow:         3px 3px 5px rgba(50, 50, 50, 0.75);
+}
+.letters span:ACTIVE {
+  background-color: #04B404;
+}
+.letters span.disabled {
+  background-color: #e7e7e7;
+  color: #b1b1b1;
+}
+.clear {
+  clear: both;
+  margin-bottom: 4px;
+}
+.image {
+  position: relative;
+  width: 254px;
+  height: 340px;
+  margin-left: 50%;
+}
+.hangman {
+  position: absolute;
+  top: 0px;
+  left: -127px;
+  opacity:0;
+}
+#hangman_1 {
+  opacity:1.0;
 }

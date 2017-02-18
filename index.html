@@ -1,77 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Hangman</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+<html lang="en-us">
 
-
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles/style.css">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Literary Hangman</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:900" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 </head>
+
 <body>
 
-<!--site title screen-->
-<div class="row">
-  <div class="col-md-12">
-  <h1>Literary Hangman</h1>
-  </div>
-</div><!--end title screen-->
+<nav class="navbar navbar-default">
+	<div class="container">
+			<h1 class="navbar-left">Literary Hangman</h1>
+			<ul class="navbar-right list-inline">
+				<li><h3>Wins: <span id="wins"></span></h3></li>
+				<li><h3> | </h3></li>
+				<li><h3>Loses: <span id="loses"></span></h3></li>
+			</ul>	
+	</div>		
+</nav>
 
-<div class="row">
-  <!--gallows-->
-  <div id="gallows" class="gallows col-md-6">
-  <img class="center-block img-responsive" src="assets/images/hangman0.png">
-  </div><!--end gallows-->
 
-  <!--word bank titles-->
-  <div class="wordBlank col-md-6">
-  <p>____________</p>
-  </div><!-- end word bank titles-->
-</div><!--end row 2-->  
+<div id="content" class="container-fluid">
+	<div class="row">
+		
+	</div><!--/row1-->
 
-<div class="row">
-  <!--letter graveyard-->
-  <div id="grave" class="grave col-md-6">
-  <p> where letters go to die </p>
-  </div><!--end graveyard-->
-  
-  <!--keyboard key entry--> 
-  <div id="alphabet-keypad" class="col-md-6">
-        <div class="letter-button">A</div>
-        <div class="letter-button">B</div>
-        <div class="letter-button">C</div>
-        <div class="letter-button">D</div>
-        <div class="letter-button">E</div>
-        <div class="letter-button">F</div>
-        <div class="letter-button">G</div>
-        <div class="letter-button">H</div>
-        <div class="letter-button">I</div>
-        <div class="letter-button">J</div>
-        <div class="letter-button">K</div>
-        <div class="letter-button">L</div>
-        <div class="letter-button">M</div>
-        <div class="letter-button">N</div>
-        <div class="letter-button">O</div>
-        <div class="letter-button">P</div>
-        <div class="letter-button">Q</div>
-        <div class="letter-button">R</div>
-        <div class="letter-button">S</div>
-        <div class="letter-button">T</div>
-        <div class="letter-button">U</div>
-        <div class="letter-button">V</div>
-        <div class="letter-button">W</div>
-        <div class="letter-button">X</div>
-        <div class="letter-button">Y</div>
-        <div class="letter-button">Z</div>
-  </div><!--end keyboard-->
+	<div class="row">
+		<div class="col-md-12">
+			<div class="image">
+				<img src="assets/images/hangman1.png" alt="Hangman" class="hangman" id="hangman_1"/>
+				<img src="assets/images/hangman2.png" alt="Hangman" class="hangman" id="hangman_2"/>
+				<img src="assets/images/hangman3.png" alt="Hangman" class="hangman" id="hangman_3"/>
+				<img src="assets/images/hangman4.png" alt="Hangman" class="hangman" id="hangman_4"/>
+				<img src="assets/images/hangman5.png" alt="Hangman" class="hangman" id="hangman_5"/>
+				<img src="assets/images/hangman6.png" alt="Hangman" class="hangman" id="hangman_6"/>
+				<img src="assets/images/hangman7.png" alt="Hangman" class="hangman" id="hangman_7"/>
+			</div>
+		</div>
+	</div><!--/row2-->
 
-</div><!--end row 3-->  
+	<div class="row">
+			<div class="col-md-3"></div>
+			<div id="secret" class="col-md-6"></div>
+			<div class="col-md-3"></div>
+	</div><!--/row3-->	
 
+	<div class="row">	
+			<div class="container letters">
+				<span class="btn custom">Q</span><span class="btn custom">W</span><span class="btn custom">E</span><span class="btn custom">R</span><span class="btn custom">T</span><span class="btn custom">Y</span><span class="btn custom">U</span><span class="btn custom">I</span><span class="btn custom">O</span><span class="btn custom">P</span><div class="clear"></div>
+				<span class="btn custom">A</span><span class="btn custom">S</span><span class="btn custom">D</span><span class="btn custom">F</span><span class="btn custom">G</span><span class="btn custom">H</span><span class="btn custom">J</span><span class="btn custom">K</span><span class="btn custom">L</span><div class="clear"></div>
+				<span class="btn custom">Z</span><span class="btn custom">X</span><span class="btn custom">C</span><span class="btn custom">V</span><span class="btn custom">B</span><span class="btn custom">N</span><span class="btn custom">M</span>
+			</div>
+	</div>
+
+</div><!--/container-->
+
+  <footer class="footer">
+	<div class="container-fluid">
+		<h4>&#169; Copyright 2017 Jason O'Brien</h4>
+	</div>
+  </footer>	
+
+<script src="assets/javascript/game.js"></script>
 
 </body>
-
-
-
 </html>
