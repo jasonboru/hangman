@@ -62,7 +62,7 @@ $(document).ready(function() {
 					loses++;
 					$("#loses").html(loses);					
 					reset();
-					alert("Sorry you lost. I'm sure you'll get the next one!");
+					alert("Sorry you lost. I'm sure you've read the next book!");
 					currentImage=1;
 				}
 			});
