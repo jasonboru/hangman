@@ -2,8 +2,29 @@ body {
 	background-image: url(../images/textured-paper.png);
 }
 
-li {
-	padding-top: 10px;
+
+.header {
+	color: #c8c8c8;
+    background-image: linear-gradient(#484e55, #3a3f44 60%, #313539);
+	border-bottom: 3px solid #c8c8c8;
+	height: 60px;
+	text-align: center;
+}
+
+.header h1 {
+	margin: auto;
+	line-height: 60px;
+	vertical-align: middle;
+}
+
+.scores {
+	height: 40px;
+	text-align: center;	
+}
+
+.scores ul {
+	margin: auto;
+	line-height: 40px;
 }
 
 #content {

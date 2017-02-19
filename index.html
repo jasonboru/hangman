@@ -13,19 +13,39 @@
 
 <body>
 
-<nav class="navbar navbar-default">
-	<div class="container">
-			<h1 class="navbar-left">Literary Hangman</h1>
-			<ul class="navbar-right list-inline">
+
+
+<header class="header">
+	
+	<h1>Literary Hangman</h1>
+
+</header>
+
+<div class="container-fluid"><!--master container-->
+
+
+
+
+<div class="row">
+	<div class="col-md-12">
+
+			<ul class="scores list-inline">
 				<li><h3>Wins: <span id="wins"></span></h3></li>
 				<li><h3> | </h3></li>
 				<li><h3>Loses: <span id="loses"></span></h3></li>
 			</ul>	
-	</div>		
-</nav>
+
+	</div>
+</div>
 
 
-<div id="content" class="container-fluid">
+
+
+
+
+
+
+<div id="content">
 	<div class="row">
 		
 	</div><!--/row1-->
@@ -51,17 +71,19 @@
 	</div><!--/row3-->	
 
 	<div class="row">	
-			<div class="container letters typewriter">
+			<div class="letters typewriter">
 				<span class="btn custom">Q</span><span class="btn custom">W</span><span class="btn custom">E</span><span class="btn custom">R</span><span class="btn custom">T</span><span class="btn custom">Y</span><span class="btn custom">U</span><span class="btn custom">I</span><span class="btn custom">O</span><span class="btn custom">P</span><div class="clear"></div>
 				<span class="btn custom">A</span><span class="btn custom">S</span><span class="btn custom">D</span><span class="btn custom">F</span><span class="btn custom">G</span><span class="btn custom">H</span><span class="btn custom">J</span><span class="btn custom">K</span><span class="btn custom">L</span><div class="clear"></div>
 				<span class="btn custom">Z</span><span class="btn custom">X</span><span class="btn custom">C</span><span class="btn custom">V</span><span class="btn custom">B</span><span class="btn custom">N</span><span class="btn custom">M</span>
 			</div>
 	</div>
 
-</div><!--/container-->
+</div><!--/content-->
+
+</div><!--/master container-->
 
   <footer class="footer">
-	<div class="container-fluid">
+	<div>
 		<h4>&#169; Copyright 2017 Jason O'Brien</h4>
 	</div>
   </footer>	
