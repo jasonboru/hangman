@@ -1,12 +1,14 @@
-
 $(document).ready(function() {
 
   /*word bank, single words for now*/
   var words = [
-    //"Dracula", "Shogun", "Beowulf", "Lolita", "Foundation", "Faust", "Ulysses", "Utopia", "Walden",
-    //"Siddhartha", "Steppenwolf", "Inferno", "Hamlet", "Macbeth", "Persuasion", "Twilight",
-    //"Ivanhoe", "Frakenstein", "Metamorphoses", "Firestarter", "Choke", "Lancelot", "Galapagos",
-    "The Great Gatsby",
+    "Dracula", "Shogun", "Beowulf", "Lolita", "Foundation", "Faust", "Ulysses", "Utopia", "Walden",
+    "Siddhartha", "Steppenwolf", "Inferno", "Hamlet", "Macbeth", "Persuasion", "Twilight",
+    "Ivanhoe", "Frakenstein", "Metamorphoses", "Firestarter", "Choke", "Lancelot", "Galapagos",
+    "The Great Gatsby", "Don Quixote", "War and Peace", "On the Road", "the Illiad", "Brave New World", 
+    "Lord of the Flies", "The Sun Also Rises", "The Scarlet Letter", "Candide", "Little Women",
+    "Moby Dick", "A Tale of Two Cities", "The Time Machine", "The Trial", "The Jungle Book", 
+    "The Grapes of Wrath", "Slaughterhouse Five", "Of Mice and Men", "Heart of Darkness", 
   ];
 
   $(function() {
@@ -24,7 +26,7 @@ $(document).ready(function() {
 	function setup(theWord) {
 	  word = theWord.toUpperCase();
 	  remainingletters = word;
-	  secret = word.replace(/./g, '_');
+	  secret = word.replace(/\w/g, '_');
 	  $('#secret').text(secret);
 	}
 
@@ -45,7 +47,7 @@ $(document).ready(function() {
 		if (found) {
 			$('#secret').text(secret);
 			if (secret.indexOf('_') == -1) {
-				alert('You won!');
+				alert('Good job you won! You are really well read.');
 				wins++;
 				$("#wins").html(wins);
 				reset();
@@ -57,10 +59,10 @@ $(document).ready(function() {
 			$(imageId).fadeTo(300, 1.0, function() {
 				if (currentImage == 7) {
 					$('#secret').text(word);
-					alert('You lost!');
 					loses++;
 					$("#loses").html(loses);					
 					reset();
+					alert("Sorry you lost. I'm sure you'll get the next one!");
 					currentImage=1;
 				}
 			});
