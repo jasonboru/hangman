@@ -10,14 +10,9 @@ li {
 	text-align: center;
 }
 
-.title {
-	font-family: 'Comic Sans MS', cursive, sans-serif;
-	font-size: 1.5em;
-	margin-bottom: 0px;
-}
 #secret {
 	font-family: 'arial black';
-	font-size: 6em;
+	font-size: 5em;
 	font-weight: bold;
 	letter-spacing: 10px;
 	color: #000;
@@ -26,12 +21,12 @@ li {
 	margin-top: 20px;
 }
 .letters span {
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: bold;
-	padding-right: 5px;
-	padding-left: 5px;
-	margin-left: 5px;
-	margin-right: 5px;
+	padding-right: 3px;
+	padding-left: 2px;
+	margin-left: 1px;
+	margin-right: 1px;
 	cursor: pointer;
 	background-color: #484e55;
 	-moz-user-select: none;
@@ -58,8 +53,8 @@ li {
 }
 .image {
 	position: relative;
-	width: 254px;
-	height: 340px;
+	width: 353px;
+	height: 420px;
 	margin-left: 50%;
 }
 .hangman {
@@ -73,7 +68,7 @@ li {
 }
 
 .custom {
-    width: 60px !important;
+    width: 50px !important;
 }
 
 .navbar {    

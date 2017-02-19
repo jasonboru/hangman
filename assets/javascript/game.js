@@ -3,9 +3,10 @@ $(document).ready(function() {
 
   /*word bank, single words for now*/
   var words = [
-    "Dracula","Shogun","Beowulf","Lolita","Foundation","Faust","Ulysses","Utopia","Walden",
-    "Siddhartha", "Steppenwolf","Inferno", "Hamlet", "Macbeth", "Persuasion", "Twilight",
-    "Ivanhoe", "Frakenstein", "Metamorphoses", "Firestarter", "Choke", "Lancelot", "Galapagos",
+    //"Dracula", "Shogun", "Beowulf", "Lolita", "Foundation", "Faust", "Ulysses", "Utopia", "Walden",
+    //"Siddhartha", "Steppenwolf", "Inferno", "Hamlet", "Macbeth", "Persuasion", "Twilight",
+    //"Ivanhoe", "Frakenstein", "Metamorphoses", "Firestarter", "Choke", "Lancelot", "Galapagos",
+    "The Great Gatsby",
   ];
 
   $(function() {
@@ -69,7 +70,6 @@ $(document).ready(function() {
 	$('.letters span').click(function(event) {
 		var letter = event.target.innerText;
 		$(event.target).addClass('disabled');
-		/*$(event.target).unbind('click');  --think I dont need this after all*/
 		processletter(this.innerText);
 	});
 	
