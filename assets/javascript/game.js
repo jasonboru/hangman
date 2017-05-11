@@ -5,7 +5,7 @@ $(document).ready(function() {
     var words = [
         "Dracula", "Shogun", "Beowulf", "Lolita", "Foundation", "Faust", "Ulysses", "Utopia", "Walden",
         "Siddhartha", "Steppenwolf", "Inferno", "Hamlet", "Macbeth", "Persuasion", "Twilight",
-        "Ivanhoe", "Frakenstein", "The Metamorphosis", "Firestarter", "Choke", "Lancelot", "Galapagos",
+        "Ivanhoe", "Frankenstein", "The Metamorphosis", "Firestarter", "Choke", "Lancelot", "Galapagos",
         "The Great Gatsby", "Don Quixote", "War and Peace", "On the Road", "the Illiad", "Brave New World",
         "Lord of the Flies", "The Sun Also Rises", "The Scarlet Letter", "Candide", "Little Women",
         "Moby Dick", "A Tale of Two Cities", "The Time Machine", "The Trial", "The Jungle Book",
@@ -38,7 +38,7 @@ $(document).ready(function() {
             $('#secret').text(secret);
         }
 
-        //set variable to call random world function
+        //set variable to call random word function
         theWord = getWord();
         //call function to get word from bank at random
         setup(theWord);
@@ -48,7 +48,7 @@ $(document).ready(function() {
 
         //function to process the letter chosen by the user
         function processletter(letter) {
-            //create a variable to later use to determine if the user choice of letter is found in theWord	
+            //create a variable to later use to determine if the user choice of letter is found in theWord
             var found = false;
             //run a for loop for the length of theWord
             for (var i = 0; i < remainingletters.length; i++) {
@@ -64,17 +64,20 @@ $(document).ready(function() {
                 $('#secret').text(secret);
                 // if all letters picked win the round
                 if (secret.indexOf('_') == -1) {
-                    alert('Good job you won! You are really well read.');
                     //increment wins variable
                     wins++;
                     //write new win value to the DOM
                     $("#wins").html(wins);
-                    //call the reset function to start a new round.
-                    reset();
-                    //show the starting hangman image
-                    currentImage = 1;
+
+                    setTimeout(function(){
+                      alert('Good job you won! You are really well read.');
+                      //call the reset function to start a new round.
+                      reset();
+                      //show the starting hangman image
+                      currentImage = 1;
+                    }, 1000);
                 }
-                //if a wrong letter is guessed 
+            //if a wrong letter is guessed
             } else {
                 //increment the variable for hangman image
                 currentImage++;
@@ -84,17 +87,20 @@ $(document).ready(function() {
                 $(imageId).fadeTo(300, 1.0, function() {
                     //if the final hangman image shows stop the round
                     if (currentImage == 7) {
-                        alert("Sorry you lost. I'm sure you've read the next book!");
                         //show the rmaining word
                         $('#secret').text(word);
                         //increment the losses variable
                         losses++;
                         //write new loss value to the DOM
                         $("#losses").html(losses);
-                        //call the reset function to start a new round.					
-                        reset();
-                        //show the starting hangman image					
-                        currentImage = 1;
+                        //call the reset function to start a new round.
+
+                        setTimeout(function(){
+                          alert("Sorry you lost. I'm sure you've read the next book!");
+                          reset();
+                          //show the starting hangman image
+                          currentImage = 1;
+                        }, 1000);
                     }
                 });
             }
